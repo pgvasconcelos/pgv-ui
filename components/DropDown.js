@@ -1,23 +1,16 @@
 'use client';
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-
-//teste
-import { useEffect, useState } from "react";
-  
-
 const options = ["Design", "Development", "Business"];
 
 export const DropDown = ({ selected }) => {
 
-  //teste
-  const [selectedValue, setSelectedValue] = useState("");
 
 
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    console.log(searchParams.get('selected'))
+    // console.log(searchParams.get('selected'))
 
     const onSelect = (event) => {
       const current = new URLSearchParams(searchParams);

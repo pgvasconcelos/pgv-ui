@@ -17,11 +17,15 @@ export const dynamic = "force-dynamic";
 
 const WorksPage = async ({searchParams} = {}  ) =>{
     
-    console.log(searchParams)
+     console.log(searchParams)
     const selectedSearch = searchParams?.selected ?? "";
+    console.log(selectedSearch)
+
     const selected = Array.isArray(selectedSearch)
-    ? selectedSearch[0] : selectedSearch;
- 
+    ? selectedSearch[0] : selectedSearch
+
+    console.log(selected)
+
     //  function handleSelection(e) {
     //     // e.preventDefault();
     //     const value = e.target.value.trim();
@@ -29,6 +33,8 @@ const WorksPage = async ({searchParams} = {}  ) =>{
     //     console.log(value)
     //   }
     if(!searchParams) {
+        console.log("!searchParams")
+
          searchParams = { selected: "all" };
     }
    let query = searchParams.selected
